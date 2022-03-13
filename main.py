@@ -5,7 +5,7 @@ import requests
 
 
 def request_url():
-    url = 'https://j1.pupuapi.com/client/product/storeproduct/detail/4dcdeca2-f5a3-4be8-9e2f-e099889a23a0/84bce711-4174-478c-8237-9d221f600e6c'
+    url = 'https://j1.pupuapi.com/client/product/storeproduct/detail/deef1dd8-65ee-46bc-9e18-8cf1478a67e9/dde2c9bc-61fd-41e6-b7fb-6cd3ca559f6d'
     head = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36'
     }
@@ -23,8 +23,8 @@ def request_url():
     print("详细内容：" + share_content)
 
 
-def time():
-    url = 'https://j1.pupuapi.com/client/product/storeproduct/detail/4dcdeca2-f5a3-4be8-9e2f-e099889a23a0/84bce711-4174-478c-8237-9d221f600e6c'
+def time():  # 获取时间
+    url = 'https://j1.pupuapi.com/client/product/storeproduct/detail/deef1dd8-65ee-46bc-9e18-8cf1478a67e9/dde2c9bc-61fd-41e6-b7fb-6cd3ca559f6d'
     head = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36'
     }
@@ -33,7 +33,7 @@ def time():
     name = dict1["data"]["name"]  # 商品名字
     price = str(int(dict1["data"]["price"]) / 100)  # 折扣价
     print("-------------" + name + "-------------")
-    try:
+    try:  #终止程序时，不会报错
         while (True):
             nowTimeAndPrint = strftime('%Y' + '-' + '%m' + '-' + '%d' + ' %H:%M:%S,价格为' + price)
             print(nowTimeAndPrint)
